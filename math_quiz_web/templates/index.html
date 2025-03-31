@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Quiz Game</h1>
+        <select id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <button onclick="startQuiz()">Start Quiz</button>
+        <p id="timer">⏳ Time Left: 60s</p>
+<p id="score">Score: 0</p>
+<p id="highScore">🏆 High Score: 0</p>
+
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="submitAnswer()">Submit</button>
+        <p id="result"></p>
+    </div>
+    
+    <!-- JavaScript at the end of body -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
